@@ -48,13 +48,16 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("📥 Downloading the song by @UvinduBro 📥")
+    m.edit("📥 Downloading...")
+    m.edit("✔ Downloaded...")
+    m.edit("🛡 Scaning...")
+    m.edit("📤 Uploading By Emo Database..")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**~ Uploaded by @UBSongBot ~**'
+        rep = '**~ Uploaded by @emSong_Bot ~**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -62,7 +65,7 @@ def song(client, message):
         s = message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('❌ Error')
+        m.edit('❌ Error  Report @EmoBotDevolopers')
         print(e)
 
     try:
