@@ -1,5 +1,5 @@
 #Uvindu Bro <https://t.me/UvinduBro>
-
+#😎😍💔💙❤💚💌💥👋✌🤘💻💾📓📗💡📍📌🔓🔒🔐🔏🖇🔗🛡🔮⚘🌷🌱🌲🌟☄☇🌙🌞🌝🌚☈⭐🌟☄
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from JESongBot.plugins import *
 from pyrogram import idle, filters
@@ -8,12 +8,13 @@ from JESongBot import Jebot as app
 from JESongBot import LOGGER
 
 pm_start_text = """
-Hey [{}](tg://user?id={}), I'm Song Downloader Bot 🎵
+👋 Hello [{}](tg://user?id={}),\n\n I'm Emo Song Downloader Bot 🎵
 
-😉 Just send me the song name you want to download.😋
+⚘ Just send me the song name you want to download.😋
       eg:```/song Faded```
       
-A bot by @Uvindu_Bro 🇱🇰
+**☇Powerd By </> Emo Bot Devolopers**
+**💻 Devoloper** :- @ImRishmika
 """
 
 @app.on_message(filters.command("start"))
@@ -26,10 +27,14 @@ async def start(client, message):
             [
                 [
                      InlineKeyboardButton(
-                        text="Channel 🔊", url="https://t.me/UvinduBr"
+                        text="☇ Team Emo", url="https://t.me/EmoBotDevolopers"
                     ),
                     InlineKeyboardButton(
-                        text="Dev 🔥", url="https://t.me/Uvindu_Bro"
+                        text="☄ Support", url="https://t.me/EmoBotSupport"
+                    )
+                ],
+                 InlineKeyboardButton(
+                        text="💻 Devoloper", url="https://t.me/ImRishmika"
                     )
                 ]
             ]
@@ -40,5 +45,5 @@ async def start(client, message):
 
 
 app.start()
-LOGGER.info("✅ UBSongBot is online.")
+LOGGER.info("✅ Emo Song Bot is online.")
 idle()
